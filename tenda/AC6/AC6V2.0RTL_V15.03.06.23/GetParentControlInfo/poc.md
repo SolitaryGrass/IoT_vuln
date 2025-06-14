@@ -4,7 +4,7 @@ Firmware download website:
 
 [AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
 
-在GetParentControlInfo函数中，通过websGetVar获得用户输入的mac，并未对其进行输入验证，直接使用strcpy写入pc_info->mac_addr,而pc_info通过malloc创建的空间只有0x254大小。因此会造成溢出。
+In the `GetParentControlInfo` function, the user-supplied MAC address is obtained via `websGetVar`. However, this input is not validated, and it's directly copied into `pc_info->mac_addr` using `strcpy`. The allocated space for `pc_info` via `malloc` is only `0x254` bytes. Consequently, this leads to a **buffer overflow**.
 
 ```c
 mac_addr = websGetVar(wp, "mac", byte_519A28);//get mac value

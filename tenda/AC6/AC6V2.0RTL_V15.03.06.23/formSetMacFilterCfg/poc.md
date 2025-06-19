@@ -6,7 +6,13 @@ Firmware download website:
 
 In the function `formSetMacFilterCfg`, user-supplied parameters **`macFilterType`** and **`deviceList`** are passed to a function **without input validation**, ultimately leading to an **overflow**.
 
+formSetMacFilterCfg-》set_macfilter_rules-》set_macfilter_rules_by_one-》parse_macfilter_rule-》strcpy
+
 ![image-20250614182456806](https://kingimg.oss-cn-hangzhou.aliyuncs.com/img/image-20250614182456806.png)
+
+![image-20250619135927395](C:\Users\SolitaryGrass\AppData\Roaming\Typora\typora-user-images\image-20250619135927395.png)
+
+![image-20250619135900666](https://kingimg.oss-cn-hangzhou.aliyuncs.com/img/image-20250619135900666.png)
 
 poc
 

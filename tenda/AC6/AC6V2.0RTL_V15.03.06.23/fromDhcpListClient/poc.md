@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 Within the `fromDhcpListClient` function, users can craft a POST request to supply three parameters: `LISTLEN`, `page`, and `list_listcnt`. There are two distinct overflow vulnerabilities inside this function:
 

@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 Within the `fromAddressNat` function, a user can craft a POST request to supply three parameters: **`entrys`**, **`mitInterface`**, and **`page`**. These parameters are then directly passed to stack-allocated variables using `sprintf` **without any prior validation or checks**. Any one of these three parameters can independently lead to a **stack overflow**.
 

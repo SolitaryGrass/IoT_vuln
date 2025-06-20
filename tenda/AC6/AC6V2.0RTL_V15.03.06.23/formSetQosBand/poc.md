@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the `formSetQosBand` function, a **stack buffer overflow** occurs. This happens when a user crafts a POST request with an unvalidated **`list`** parameter. This `list` parameter is then passed to the `setQosMiblist` function, where it's copied into the `qos_str` buffer (which has a size of `256` bytes) using `strcpy(qos_str, p);`. Since **no validation** is performed on the input `list`'s length, providing a string longer than 255 characters will lead to an overflow of `qos_str`.
 

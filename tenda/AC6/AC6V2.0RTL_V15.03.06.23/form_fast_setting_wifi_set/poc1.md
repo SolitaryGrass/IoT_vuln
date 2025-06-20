@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the `form_fast_setting_wifi_set` function, a user-crafted POST request can pass the **`ssid` variable** to the backend. Inside the function, **`strcpy` is used directly to write this variable into the stack-allocated buffers `ssid_24g[64]` and `ssid_5g[64]` without any prior validation**. This easily leads to a **stack overflow**.
 

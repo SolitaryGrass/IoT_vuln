@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the `form_fast_setting_wifi_set` function, users can craft a POST request to freely pass the **`timeZone` parameter** to the backend. This parameter is then processed by `sscanf`, which directly writes it into the **stack-allocated variable `timespand[2][4]`**. Given the small size of `timespand` (only 4 bytes per sub-array), this readily leads to a **stack overflow**.
 

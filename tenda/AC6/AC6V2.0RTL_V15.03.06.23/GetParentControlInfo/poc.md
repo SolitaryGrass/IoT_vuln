@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the `GetParentControlInfo` function, the user-supplied MAC address is obtained via `websGetVar`. However, this input is not validated, and it's directly copied into `pc_info->mac_addr` using `strcpy`. The allocated space for `pc_info` via `malloc` is only `0x254` bytes. Consequently, this leads to a **buffer overflow**.
 

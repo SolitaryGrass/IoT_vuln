@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the `setSmartPowerManagement` function, a user can craft a POST request to provide the **`time` parameter**. This `time` parameter is then processed by `sscanf(time, "%[^:]:%[^-]-%[^:]:%s", hour_start, min_start, hour_end, min_end);`, which writes the extracted data directly to the stack-allocated variables `hour_start`, `min_start`, `hour_end`, and `min_end`. Since each of these variables has a small size of **8 bytes**, it's very easy to trigger a **stack overflow**.
 

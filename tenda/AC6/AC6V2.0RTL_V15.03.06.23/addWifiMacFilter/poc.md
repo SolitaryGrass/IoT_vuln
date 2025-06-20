@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the `addWifiMacFilter` function, the parameters **deviceID** and **deviceMac** are read into `device_id` and `device_mac` respectively using `websGetVar`. These inputs are then passed to `sprintf(mib_value, "%s;%d;%s", device_mac, 1, device_id);` without prior validation. Since **mib_value** is only 256 bytes in size, providing an overly long **deviceID** or **deviceMac** can directly cause a **buffer overflow**.
 

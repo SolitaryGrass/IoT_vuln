@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the function `formSetMacFilterCfg`, user-supplied parameters **`macFilterType`** and **`deviceList`** are passed to a function **without input validation**, ultimately leading to an **overflow**.
 

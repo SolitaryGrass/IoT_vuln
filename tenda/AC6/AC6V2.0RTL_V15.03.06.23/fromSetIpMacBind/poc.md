@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 在函数fromSetIpMacBind中，通过用户构造post请求传入list参数，未经参数检查。在1<=bindnum<=32的时候list传入的参数会通过strcpy(mib_buf, list);传入栈中造成溢出。其中mib_value[128]。
 

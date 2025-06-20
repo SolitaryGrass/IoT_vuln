@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the `fromSetRouteStatic` function, a user can craft a POST request to pass the **`list` parameter** to the backend. This `list` parameter is then **passed unvalidated** into the `save_staticroute_data` function. Inside `save_staticroute_data`, it's further processed by `sscanf(p, "%,,%,,%,,%s", dst_net, net_mask, net_gw, net_ifname);`, which writes the data directly to stack-allocated variables, leading to a **stack overflow**.
 

@@ -2,7 +2,7 @@
 
 Firmware download website:
 
-[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/102855)
+[AC6V2.0升级软件_腾达(Tenda)官方网站](https://www.tenda.com.cn/material/show/2855)
 
 In the `formSetCfm` function, when user input sets `funcname` to **`save_list_data`**, the parameters **`funcpara1`** and **`funcpara2`** are passed to the `save_list_data` function. Inside `save_list_data`, `funcpara1` is then used in a `sprintf` call: `sprintf(mib_name, "%s.list%d", list_name, counta);`. This writes to a stack variable **`mib_name`** which has a fixed size of only **64 bytes**. Crucially, there's **no length validation** performed on the input, making it very easy to cause a **buffer overflow**.
 
